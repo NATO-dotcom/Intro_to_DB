@@ -5,23 +5,23 @@ CREATE DATABASE IF NOT EXISTS alx_book_store;
 USE alx_book_store;
 
 -- Create Authors table
-CREATE TABLE AUTHORS (
+CREATE TABLE Authors (
     author_id INT PRIMARY KEY,
     author_name VARCHAR(215)
 );
 
 -- Create Books table
-CREATE TABLE BOOKS (
+CREATE TABLE Books (
     book_id INT PRIMARY KEY,
     title VARCHAR(130),
     author_id INT,
     price DOUBLE,
     publication_date DATE,
-    FOREIGN KEY (author_id) REFERENCES AUTHORS(author_id)
+    FOREIGN KEY (author_id) REFERENCES Authors(author_id)
 );
 
 -- Create Customers table
-CREATE TABLE CUSTOMERS (
+CREATE TABLE Customers (
     customer_id INT PRIMARY KEY,
     customer_name VARCHAR(215),
     email VARCHAR(215),
@@ -29,7 +29,7 @@ CREATE TABLE CUSTOMERS (
 );
 
 -- Create Orders table
-CREATE TABLE ORDERS (
+CREATE TABLE Orders (
     order_id INT NOT NULL PRIMARY KEY,
     customer_id INT NOT NULL,
     order_date DATE NOT NULL,
