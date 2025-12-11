@@ -30,7 +30,7 @@ def create_database():
             cursor = db_connection.cursor()
             
             # Use the CREATE DATABASE IF NOT EXISTS statement
-            create_db_query = f"CREATE DATABASE IF NOT EXISTS {DATABASE_NAME}"
+            create_db_query = "CREATE DATABASE IF NOT EXISTS alx_book_store"
             
             # 2. Execute the query
             cursor.execute(create_db_query)
