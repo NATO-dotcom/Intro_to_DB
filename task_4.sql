@@ -1,3 +1,3 @@
 -- Prints the full description of the 'Books' table without using DESCRIBE or EXPLAIN.
 USE alx_book_store;
-SELECT * FROM Books;
+SHOW FULL COLUMNS FROM Books;
